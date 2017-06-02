@@ -1,5 +1,5 @@
 CREATE TABLE tweet(
-	index INTEGER,
+	index INTEGER NOT NULL,
 	--tweet_id INTEGER,
 	inhalt VARCHAR NOT NULL,
 	is_retweet BOOLEAN NOT NULL,
@@ -12,28 +12,28 @@ CREATE TABLE tweet(
 );
 	
 CREATE TABLE twittert (
-	index INTEGER,
+	index INTEGER NOT NULL,
 	--tweet_id INTEGER,
 	account_name VARCHAR NOT NULL,
     PRIMARY KEY (index)
 );
 	
 CREATE TABLE retweetet (
-	index INTEGER,
+	index INTEGER NOT NULL,
 	--tweet_id INTEGER,
 	account_name VARCHAR NOT NULL,
     PRIMARY KEY (index) 
 );
 
 CREATE TABLE enthält (
-	index INTEGER,
+	index INTEGER NOT NULL,
 	--tweet_id INTEGER,
     "text" VARCHAR NOT NULL,
     PRIMARY KEY ("text")
 );
 	
 CREATE TABLE kommt_vor_mit (
-	index INTEGER,
+	index INTEGER NOT NULL,
 	--tweet_id INTEGER,
 	"text" VARCHAR NOT NULL,
 	anzahl INTEGER,
@@ -41,14 +41,14 @@ CREATE TABLE kommt_vor_mit (
 );
 
 CREATE TABLE account (
-	index INTEGER,
+	index INTEGER NOT NULL,
 	--tweet_id INTEGER,
 	account_name VARCHAR NOT NULL,
     PRIMARY KEY (index)
 );
 
 CREATE TABLE hashtag (
-	index INTEGER,
+	index INTEGER NOT NULL,
 	---tweet_id INTEGER,
 	"date" VARCHAR,
     "text" VARCHAR NOT NULL,
